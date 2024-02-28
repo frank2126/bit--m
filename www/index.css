@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #171f63;
     color: #fff;
     text-align: center;
     padding: 1em 0;
@@ -29,6 +29,62 @@ nav a {
     font-weight: bold;
     font-size: 1.2em;
 }
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px;
+}
+
+.menu-trigger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-trigger span {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 5px 0;
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-items li {
+    margin: 0;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {}
+    .menu-trigger {
+        display: flex;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .menu-items.show {
+        display: flex;
+    }
 
 section {
     padding: 2em;
@@ -48,7 +104,7 @@ section {
 }
 
 footer {
-    background-color: #333;
+    background-color: #171f63;
     color: #fff;
     text-align: center;
     padding: 1em 0;
